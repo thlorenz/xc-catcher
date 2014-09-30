@@ -63,9 +63,14 @@ function getRating(cols) {
   var actionsInfo = cheerio(cols[11])
     , downloadLink = actionsInfo.find('a')[0].attribs.href
     , ratingInfo = actionsInfo.find('li.selected')
-    , rating = cheerio(ratingInfo).find('span')[0].children[0].data
 
-  return rating;
+  var spans = cheerio(ratingInfo).find('span');
+  if (!spans.length) return 'N/A';
+
+  var span = spans[0];
+  if (!span.children.length || !span.children[0].data) return 'N/A';
+
+  return span.children[0].data;
 }
 
 
