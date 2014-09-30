@@ -13,6 +13,7 @@
   "homepage": "https://github.com/thlorenz/xc-catcher",
   "dependencies": {
     "cheerio": "~0.17.0",
+    "minimist": "~1.1.0",
     "mkdirp": "~0.5.0",
     "npmlog": "~0.1.1",
     "queue": "~3.0.7",

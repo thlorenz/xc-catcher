@@ -7,6 +7,7 @@ function cc(el) {
 }
 
 function clean(s) {
+  if (!s) return '';
   return s
     .replace('\n', ' ')
     .replace(/ +/, ' ')
@@ -17,7 +18,7 @@ function textColFrom(cols, idx) {
   var col = cols[idx];
   if (!col) return 'N/A';
   var children = col.children;
-  if (!children.length) return 'N/A';
+  if (!children.length || !children[0].data) return 'N/A';
   return clean(children[0].data)
 }
 
