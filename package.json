@@ -4,6 +4,7 @@
   "description": "Getting all bird songs from xeno-canto website",
   "main": "index.js",
   "scripts": {
+    "test": "tap test"
   },
   "repository": {
     "type": "git",
@@ -12,7 +13,11 @@
   "homepage": "https://github.com/thlorenz/xc-catcher",
   "dependencies": {
     "cheerio": "~0.17.0",
-    "request": "~2.44.0"
+    "mkdirp": "~0.5.0",
+    "npmlog": "~0.1.1",
+    "queue": "~3.0.7",
+    "request": "~2.44.0",
+    "rimraf": "~2.2.8"
   },
   "devDependencies": {
     "tap": "~0.4.3"
